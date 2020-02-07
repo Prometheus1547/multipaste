@@ -1,8 +1,6 @@
 package md.cernev.plugins;
 
-import com.intellij.mock.Mock;
 import com.intellij.openapi.actionSystem.DataContext;
-import com.intellij.openapi.compiler.Validator;
 import com.intellij.openapi.editor.CaretModel;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
@@ -11,15 +9,9 @@ import com.intellij.openapi.editor.SelectionModel;
 import com.intellij.openapi.editor.actionSystem.EditorAction;
 import com.intellij.openapi.editor.actionSystem.EditorActionHandler;
 import com.intellij.openapi.editor.actionSystem.EditorWriteActionHandler;
-import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.InputValidator;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.ui.NonEmptyInputValidator;
 import com.intellij.openapi.util.TextRange;
-import com.intellij.openapi.wm.ToolWindow;
-import com.intellij.openapi.wm.ToolWindowAnchor;
-import com.intellij.openapi.wm.ToolWindowFactory;
-import com.intellij.openapi.wm.ToolWindowManager;
 
 public class CopyClass extends EditorAction {
 
@@ -60,7 +52,6 @@ public class CopyClass extends EditorAction {
             String duplicate = document.getText().substring(linesBlock.getStartOffset(), linesBlock.getEndOffset());
             duplicate += "\n";
             for (int i = 0; i < count-1; i++) {
-
                 document.insertString(linesBlock.getStartOffset(), duplicate);
             }
             editor.getSelectionModel().setSelection(linesBlock.getStartOffset(), linesBlock.getEndOffset());

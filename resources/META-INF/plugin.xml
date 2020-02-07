@@ -28,10 +28,8 @@
       <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift v"  />
       <add-to-group group-id="RefactoringMenu" relative-to-action="CopyLineUpAction" anchor="after"/>
     </action>
-    <action id="HellowWorld" class="HelloAction" text="Hi, Buddy!" >
-<!--      <keyboard-shortcut first-keystroke="ctrl alt shift V" keymap="$default"  />-->
-    </action>
-    
+
+
   </actions>
 
 </idea-plugin>
