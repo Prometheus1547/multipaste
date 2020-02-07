@@ -1,0 +1,37 @@
+<idea-plugin>
+  <id>md.cernev</id>
+  <name>Multi-paste</name>
+  <version>1.0</version>
+  <vendor email="dmitrii.cernev@cedacrinternational.md" url="cedacri.md">CEDACRI Int.</vendor>
+
+  <description>Provides to make multi-paste a line or a block of codes several times</description>
+
+  <change-notes><![CDATA[
+     Nothing to change here yet, idgf what is this<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="CopyLineUpAction" class="md.cernev.plugins.CopyClass" text="Multipaste" >
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift v"  />
+      <add-to-group group-id="RefactoringMenu" relative-to-action="CopyLineUpAction" anchor="after"/>
+    </action>
+    <action id="HellowWorld" class="HelloAction" text="Hi, Buddy!" >
+<!--      <keyboard-shortcut first-keystroke="ctrl alt shift V" keymap="$default"  />-->
+    </action>
+    
+  </actions>
+
+</idea-plugin>
